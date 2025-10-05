@@ -1,0 +1,236 @@
+* {
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #5F4024;
+    /* color: #F2E8D7; */
+}
+
+/* .btn-ingredients {
+    background-color: #f2e8d7;
+    color: white;
+    border-radius: 50px;
+    width: 100px;
+    border: 2.5px solid #c3dc95;
+    transition: background-color 0.2s ease-in-out;
+}
+    
+
+.btn-ingredients:hover {
+    background-color: #c3dc95;
+    border-radius: 50px;
+    width: 100px;
+    border: 2.5px solid #c3dc95;
+} */
+
+.btn-interact {
+    border-radius: 20px;
+    background: #5F4024;
+    width: 231px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+}
+
+.btn-interact:hover {
+    color: #f1e0c2;
+}
+
+@media (max-width: 768px) {
+    .btn-interact {
+        width: 170px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-interact {
+        width: 170px;
+        font-size: 28px;
+    }
+}
+
+.content-card {
+    border-radius: 18px;
+    margin-bottom: 20px;
+    background-color: #F2E8D7;
+    padding: 20px;
+}
+
+.img-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 5px solid #5F4024;
+}
+
+.offcanvas {
+    background-color: #F2E8D7 !important;
+}
+
+.menu-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-links a {
+    list-style: none;
+    padding-left: 0;
+    font-size: 50px;
+    color: #5f4023;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    color: #896746;
+}
+
+.navbar {
+    padding: 1.25rem 2rem;
+}
+
+.navbar .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    z-index: 2;
+}
+
+.brand-logo-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60%;
+    height: auto;
+    z-index: 1;
+}
+
+@media (max-width: 480px) {
+    .brand-logo-centered {
+        max-width: 45%;
+    }
+}
+
+.points-counter {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    background-color: #F2E8D7;
+    color: #5F4024;
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 0 5px;
+}
+
+.points-counter-menu {
+    position: relative;
+    display: block;
+    background-color: #5F4024;
+    color: #F2E8D7;
+    border-radius: 8px;
+    font-size: 30px;
+    padding: 0 5px;
+}
+
+/* FIRE ICON OVERLAY */
+
+.img-container {
+    position: relative;
+    /* Ensure the overlay is positioned relative to this container */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    /* Optional: Add a semi-transparent background */
+    border-radius: 15px;
+    padding: 5px 10px 5px 0px;
+}
+
+.fire-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.vote-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .overlay {
+        bottom: 5px;
+        right: 5px;
+        padding: 3px 7px;
+    }
+
+    .fire-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .vote-count {
+        font-size: 12px;
+    }
+}
+
+/* Fire ICON OVERLAY END */
+
+.todays-pick-col,
+.left-content-card {
+    height: 710px;
+}
+
+@media (max-width: 992px) {
+    .todays-pick-col {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .todays-pick-col {
+        height: 700px;
+    }
+}
+
+@media (max-width: 576px) {
+    .todays-pick-col {
+        height: auto;
+    }
+}
+
+.rating {
+    display: inline-block;
+    font-size: 30px;
+}
+
+.star {
+    color: lightgray;
+    user-select: none;
+}
+
+.star.selected {
+    color: #5F4024;
+}
+
+.review-cafename {
+    color: #5F4024;
+    font-size: 30px;
+}

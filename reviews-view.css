@@ -1,0 +1,102 @@
+.review-container {
+      background-color: #f3e7d5;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+    }
+
+    .card-left, .card-right {
+      background-color: #f3e7d5;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .cafe-img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .heart-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #5b3b1f;
+      color: #fff;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .rating {
+      color: #5b3b1f;
+      font-size: 20px;
+    }
+
+    .slider {
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #d4b892;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      background: #5b3b1f;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .exit-btn {
+      width: 100%;
+      background-color: #5b3b1f;
+      color: #f3e7d5;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 12px;
+      font-size: 18px;
+    }
+
+    .profile-btn {
+      background-color: #5b3b1f;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(20% - 10px);
+      margin-right: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 10px);
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .review-container {
+        margin: 10px;
+      }
+    }
