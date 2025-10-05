@@ -99,7 +99,7 @@
                 const buttonContainer = document.querySelector('.button-container');
                 buttonContainer.classList.add('fade-in');
                 buttonContainer.style.opacity = 1;
-            }, 800); // Delay of 2 seconds
+            }, 500); // Delay of 500ms
         }
     </script>
 

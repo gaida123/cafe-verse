@@ -181,10 +181,10 @@
             });
 
 
-            document.getElementById('coffee-rating').style.width = (review.coffee || 60) + "%";
-            document.getElementById('ambience-rating').style.width = (review.ambience || 60) + "%";
-            document.getElementById('cleanliness-rating').style.width = (review.cleanliness || 60) + "%";
-            document.getElementById('vibes-rating').style.width = (review.vibes || 60) + "%";
+            document.getElementById('coffee-rating').style.width = (review.coffee ||  Math.random() * 100) + "%";
+            document.getElementById('ambience-rating').style.width = (review.ambience ||  Math.random() * 100) + "%";
+            document.getElementById('cleanliness-rating').style.width = (review.cleanliness ||  Math.random() * 100) + "%";
+            document.getElementById('vibes-rating').style.width = (review.vibes ||  Math.random() * 100) + "%";
 
             // Right card
             document.getElementById('user-photo').src = user.photo_url || 'img/profile-logo-brown.svg';
