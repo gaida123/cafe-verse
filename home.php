@@ -25,13 +25,13 @@
                 </div>
                 <div class="col-12 col-md-8 mb-3">
                     <div class="card content-card">
-                        <div class="card-body">
+                        <div class="card-body py-0">
                             <h3 class="card-title">Recent Reviews</h3>
                             <div id="recent-reviews" class="reviews-container"></div>
                         </div>
                     </div>
                     <div class="card content-card">
-                        <div class="card-body">
+                        <div class="card-body py-0">
                             <h3 class="card-title" style="color: #5F4024;">Cafes to Try Next</h3>
                             <div class="container-fluid px-0">
                                 <div class="row align-items-center mb-3">
@@ -140,7 +140,7 @@
                     <img src="${cafe.photo_url || 'img/cafe-placeholder.jpg'}" 
                          alt="${cafe.name}" 
                          class="img-fluid" style="border-radius:12px;">
-                    <p style="color: #5F4024; font-size: 20px; margin-top:5px;">${cafe.name}</p>
+                    <p style="color: #5F4024; font-size: 20px; margin-top:5px; margin-bottom: 0px;">${cafe.name}</p>
                 </a>
             `;
                     container.appendChild(div);
