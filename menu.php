@@ -33,8 +33,7 @@ session_start();
                 <li><a href="review">Review</a></li>
                 <li><a href="/home#todays-pick">Today's Pick</a></li>
                 <li><a href="/rewards">Rewards</a></li>
-                <li><a href="/discounts">Discounts</a></li>
-                <li><a href="/about">About</a></li>
+                <li><a href="/#">Discounts</a></li>
             </ul>
         </div>
         <div class="offcanvas-footer" style="padding: 1rem 1rem;">
