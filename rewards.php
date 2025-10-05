@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION["user_id"])) {
+    header("Location: home");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,18 +94,39 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -121,28 +149,41 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const userPoints = 12;
+        document.addEventListener("DOMContentLoaded", function() {
+            let userPoints = 0;
+
+            fetch(`get-user-profile.php?user_id=${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.user && data.user.points) {
+                        userPoints = data.user.points;
+                        pointsDisplay.innerText = userPoints;
+                    } else {
+                        console.error("Error fetching points:", data.error || "Unknown error");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching points:', error);
+                });
+
             const pointsDisplay = document.getElementById("user-points");
             const message = document.getElementById("redeem-message");
             const button = document.getElementById("redeem-btn");
 
-            pointsDisplay.innerText = userPoints;
-
-            button.addEventListener("click", function () {
+            button.addEventListener("click", function() {
                 message.style.display = "block";
-
                 if (userPoints < 10) {
-                    message.innerHTML = "⚠️ You need at least <b>10 points</b> to redeem rewards!";
+                    message.innerHTML = "You need at least <b>10 points</b> to redeem rewards!";
                 } else {
                     message.innerHTML = `
-                        ✅ <b>Partner Café Verification Coming Soon!</b><br>
-                        You currently have ${userPoints} points.<br>
-                        You’ll be able to redeem them for rewards once our partner program launches.
-                    `;
+                <b>Partner Café Verification Coming Soon!</b><br> 
+                You currently have ${userPoints} points.<br>
+                You’ll be able to redeem them for rewards once our partner program launches.
+            `;
                 }
             });
         });
     </script>
 </body>
+
 </html>

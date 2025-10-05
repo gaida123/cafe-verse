@@ -123,8 +123,8 @@
     ?>
 
     <div class="reviews-wrapper">
-        <h3 class="reviews-title">💬 Recent Reviews</h3>
-        <p class="reviews-subtext">See what other café lovers are saying about their latest experiences ☕</p>
+        <h3 class="reviews-title">Recent Reviews</h3>
+        <p class="reviews-subtext">See what other café lovers are saying about their latest experiences</p>
 
         <div class="reviews-grid">
             <?php
